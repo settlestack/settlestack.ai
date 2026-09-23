@@ -27,3 +27,9 @@ body{background:radial-gradient(ellipse at 75% 18%,#562bc618,transparent 33%),ra
 .human-callout .human-note{color:#d7c9eb;margin-top:14px}
 @media(max-width:800px){.human-callout{grid-template-columns:1fr;gap:22px}}
 @media(max-width:520px){.human-callout{padding:24px;margin-top:35px}.human-callout h3{font-size:25px}.human-callout .eyebrow{font-size:10px}}
+
+.payment-callout{margin-top:48px;padding:32px;border:1px solid #493865;border-radius:18px;background:linear-gradient(120deg,#211a3580,#11182380)}
+.payment-intro{display:flex;align-items:start;justify-content:space-between;gap:24px}.payment-intro .eyebrow{color:#bba2ed;font-size:11px;letter-spacing:1.3px}.payment-intro h3{font-size:28px;line-height:1.25;font-weight:500;letter-spacing:-.8px;margin-top:15px}.alpha-label{font-family:monospace;font-size:11px;line-height:1.6;color:#bfb1d9;border:1px solid #4d3b67;border-radius:6px;padding:7px 10px;max-width:180px}
+.payment-routes{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px}.payment-routes>div{border-top:1px solid #393047;padding-top:24px}.payment-routes h4{margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;color:#c7b4ff}.payment-routes>div:last-child h4{color:#82dbe8}.payment-routes h4 span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:1.3px;font-weight:500;color:#a59bb8;margin-top:9px}.payment-routes p{font-size:16px;line-height:1.8;color:#b6aec8;margin-top:16px}.payment-note{font-size:14px;line-height:1.7;color:#d1c5e3;margin-top:25px}
+@media(max-width:800px){.payment-intro{flex-direction:column}.alpha-label{max-width:none}.payment-routes{grid-template-columns:1fr;gap:24px}}
+@media(max-width:520px){.payment-callout{padding:24px;margin-top:35px}.payment-intro h3{font-size:25px}.payment-intro .eyebrow{font-size:10px}}

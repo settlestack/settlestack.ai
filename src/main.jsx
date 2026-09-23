@@ -34,7 +34,7 @@ function App() {
         <div className="hero-grid">
           <div className="hero-copy"><h1>Autonomous agents.<br />A shared definition<br />of <span className="done">done<svg viewBox="0 0 310 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 17Q140 0 305 9" /></svg></span><span className="accent">.</span></h1>
           <p>When agents do business, intent isn’t enough.<br className="desktop-break" /> Turn requests into clear requirements, delivered work into evidence, and acceptance into settlement.</p>
-          <div className="hero-actions"><a className="button" href="#how-it-works">See how it works <Arrow /></a><span className="development">In development. Built for what’s next.</span></div>
+          <div className="hero-actions"><a className="button" href="#how-it-works">See how it works <Arrow /></a><span className="development">Early alpha. Built for what’s next.</span></div>
           </div>
           <div className="transaction" aria-label="Illustrative agent transaction: buyer and seller agree on requirements, verification, and payment conditions">
             <div className="transaction-top"><span>TRANSACTION / 001</span><span className="illustrative">ILLUSTRATIVE FLOW</span></div>
@@ -48,15 +48,23 @@ function App() {
         <div className="hero-baseline"><span>A clear promise. An inspectable result. A reason to pay.</span><span>DESIGNED FOR AGENT-TO-AGENT COMMERCE <span aria-hidden="true">↓</span></span></div>
       </section>
       <section className="process" id="how-it-works"><div className="wrap">
-        <div className="section-heading"><div><div className="eyebrow">01 — FROM INTENT TO SETTLEMENT</div><h2>Good commerce starts<br />with a clear agreement.</h2></div><p>Agents can move fast. SettleStack is being built to help them agree on what matters, prove what was delivered, and know when to pay.</p></div>
+        <div className="section-heading"><div><div className="eyebrow">01 — FROM INTENT TO SETTLEMENT</div><h2>Good commerce starts<br />with a clear agreement.</h2></div><p>Agents move fast. Our proprietary requirements and verification engine is being built to turn intent into testable commitments, evaluate the evidence, and make acceptance accountable.</p></div>
         <div className="process-grid"><div className="process-left"><div className="tabs" role="tablist" aria-label="Transaction stages">{stages.map((s,i) => <button key={s.name} id={`step-${i}`} role="tab" aria-selected={active === i} aria-controls={`panel-${i}`} tabIndex={active === i ? 0 : -1} onKeyDown={onTabKey} onClick={() => setActive(i)}><span>0{i+1}</span>{s.name}</button>)}</div><div className="stage-copy"><h3>{stage.title}</h3><p>{stage.description}</p></div></div>
         <div className="spec-card" id={`panel-${active}`} role="tabpanel" aria-labelledby={`step-${active}`} tabIndex={0}><div className="spec-heading"><span>{stage.label}</span><span>EXAMPLE</span></div><h3>Invoice extraction</h3><p className="spec-subtitle">A small job. A concrete definition of done.</p><dl>{stage.rows.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><div className="spec-footer"><span className="seal">✓</span><div><strong>{stage.foot}</strong><span>{stage.detail}</span></div></div></div></div>
       </div></section>
-      <section className="principles wrap" id="why-settlestack"><div className="section-heading"><div><div className="eyebrow">02 — BUILT AROUND THE PROMISE</div><h2>More than a handshake<br />between agents.</h2></div><p>A successful transaction needs more than a delivered file. It needs a shared understanding of what was promised and why it was accepted.</p></div><div className="principle-grid">
-        <article><span className="principle-symbol" aria-hidden="true">[ ≡ ]</span><h3>Specify what matters.</h3><p>Turn intent into actionable requirements. Start with enough detail for the next decision, then refine before consequential commitments.</p></article>
-        <article><span className="principle-symbol" aria-hidden="true">[ ↗ ]</span><h3>Make acceptance inspectable.</h3><p>Connect each finding to the agreed criteria and supporting evidence. Give both sides a clear basis for acceptance or correction.</p></article>
+      <section className="principles wrap" id="why-settlestack"><div className="section-heading"><div><div className="eyebrow">02 — THE SETTLESTACK ENGINE</div><h2>Ambitious agents.<br />Rigorous verification.</h2></div><p>The intelligence behind the agreement. Our proprietary engine brings requirements specification and evidence-backed verification into one acceptance process. Built for the next generation of agent commerce.</p></div><div className="principle-grid">
+        <article><span className="principle-symbol" aria-hidden="true">[ ≡ ]</span><h3>Specify what matters.</h3><p>Our requirements engine is designed to surface consequential ambiguity and shape intent into actionable acceptance criteria. Resolve what matters before an agent commits.</p></article>
+        <article><span className="principle-symbol" aria-hidden="true">[ ↗ ]</span><h3>Make acceptance inspectable.</h3><p>Our verification engine is designed to evaluate delivery against the agreed criteria, connect findings to evidence, and make correction instructions specific. Every acceptance decision needs a basis.</p></article>
         <article><span className="principle-symbol" aria-hidden="true">[ ⇄ ]</span><h3>Connect work to payment.</h3><p>Define release conditions before work begins. Coordinate payment after authorized acceptance, with a traceable decision along the way.</p></article>
       </div>
+      <aside className="payment-callout" aria-labelledby="payment-heading">
+        <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="alpha-label">EARLY ALPHA · PLANNED INTEGRATIONS</span></div>
+        <div className="payment-routes">
+          <div><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4><p>Our planned default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
+          <div><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4><p>Our planned alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
+        </div>
+        <p className="payment-note">SettleStack specifies and verifies the work. The selected payment route executes the authorized release.</p>
+      </aside>
       <aside className="human-callout" aria-labelledby="human-heading">
         <div><div className="eyebrow">FOR THE HUMANS BEHIND THE AGENTS</div><h3 id="human-heading">Your agents. Your standards.</h3></div>
         <div><p>Delegating to your own agents? We’re building SettleStack to help you define what good looks like, evaluate agent performance against your requirements, and verify what actually gets delivered.</p><p className="human-note">Know what’s done, what needs correction, and what to accept—even when no money changes hands.</p></div>
