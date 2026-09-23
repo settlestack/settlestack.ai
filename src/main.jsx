@@ -26,7 +26,7 @@ function App() {
     <header className="header wrap">
       <a className="brand" href="#" aria-label="SettleStack home"><Mark />SettleStack<span className="brand-period">.</span></a>
       <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#why-settlestack">Why SettleStack</a></nav>
-      <a className="header-cta" href={repository + '/discussions'}>Build with us <Arrow diagonal /></a>
+      <a className="header-cta" href="#contact">Get in touch <Arrow diagonal /></a>
     </header>
     <main id="main">
       <section className="hero wrap">
@@ -34,7 +34,7 @@ function App() {
         <div className="hero-grid">
           <div className="hero-copy"><h1>Autonomous agents.<br />A shared definition<br />of <span className="done">done<svg viewBox="0 0 310 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 17Q140 0 305 9" /></svg></span><span className="accent">.</span></h1>
           <p>When agents do business, intent isn’t enough.<br className="desktop-break" /> Turn requests into clear requirements, delivered work into evidence, and acceptance into settlement.</p>
-          <div className="hero-actions"><a className="button" href="#how-it-works">See how it works <Arrow /></a><span className="development">Early alpha. Built for what’s next.</span></div>
+          <div className="hero-actions"><a className="button" href="#how-it-works">See how it works <Arrow /></a><span className="development">Proprietary engine. Verifiable outcomes.</span></div>
           </div>
           <div className="transaction" aria-label="Illustrative agent transaction: buyer and seller agree on requirements, verification, and payment conditions">
             <div className="transaction-top"><span>TRANSACTION / 001</span><span className="illustrative">ILLUSTRATIVE FLOW</span></div>
@@ -58,7 +58,7 @@ function App() {
         <article><span className="principle-symbol" aria-hidden="true">[ ⇄ ]</span><h3>Connect work to payment.</h3><p>Define release conditions before work begins. Coordinate payment after authorized acceptance, with a traceable decision along the way.</p></article>
       </div>
       <aside className="payment-callout" aria-labelledby="payment-heading">
-        <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="alpha-label">EARLY ALPHA · PLANNED INTEGRATIONS</span></div>
+        <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="integration-label">PLANNED PAYMENT INTEGRATIONS</span></div>
         <div className="payment-routes">
           <div><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4><p>Our planned default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
           <div><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4><p>Our planned alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
@@ -69,7 +69,21 @@ function App() {
         <div><div className="eyebrow">FOR THE HUMANS BEHIND THE AGENTS</div><h3 id="human-heading">Your agents. Your standards.</h3></div>
         <div><p>Delegating to your own agents? We’re building SettleStack to help you define what good looks like, evaluate agent performance against your requirements, and verify what actually gets delivered.</p><p className="human-note">Know what’s done, what needs correction, and what to accept—even when no money changes hands.</p></div>
       </aside></section>
-      <section className="closing wrap"><div className="closing-top"><span className="eyebrow">THE NEXT ECONOMY NEEDS A DEFINITION OF DONE.</span><Mark /></div><div className="closing-main"><h2>Let’s make agent<br />commerce work.</h2><div><p>Building agent commerce—or wrangling your own agents?<br />Help shape how agent work gets specified and verified.</p><a className="button dark" href={repository + '/discussions'}>Join the conversation <Arrow diagonal /></a></div></div></section>
+      <section className="closing wrap contact" id="contact" aria-labelledby="contact-heading">
+        <div className="closing-top"><span className="eyebrow">THE NEXT ECONOMY NEEDS A DEFINITION OF DONE.</span><Mark /></div>
+        <div className="contact-grid">
+          <div className="contact-copy"><h2 id="contact-heading">Let’s make agent<br />commerce work.</h2><p>Building agent commerce—or wrangling your own agents? Tell us what you have in mind. We’d love to share more about SettleStack.</p><a className="contact-email" href="mailto:info@settlestack.ai">info@settlestack.ai <Arrow diagonal /></a><a className="discussion-link" href={repository + '/discussions'}>Or join the conversation on GitHub <Arrow diagonal /></a></div>
+          <form className="inquiry-form" action="https://formsubmit.co/info@settlestack.ai" method="POST" aria-label="Request more information">
+            <input type="hidden" name="_subject" value="New SettleStack website inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input className="form-trap" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            <div className="form-row"><label htmlFor="contact-name">Name<input id="contact-name" name="name" autoComplete="name" placeholder="Your name" required minLength={2} maxLength={100} pattern=".*\S.*" /></label><label htmlFor="contact-email">Email<input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@company.com" required maxLength={254} /></label></div>
+            <label htmlFor="contact-message">What would you like to know?<textarea id="contact-message" name="message" placeholder="Tell us about your agents, your project, or what you’re curious about." rows={4} required minLength={10} maxLength={5000} /></label>
+            <button className="button dark" type="submit">Request more info <Arrow /></button>
+            <p className="form-note">Your inquiry is processed by FormSubmit and emailed to SettleStack. A spam check may appear after you submit.</p>
+          </form>
+        </div>
+      </section>
     </main>
     <footer className="footer wrap"><a className="brand" href="#"><Mark />SettleStack<span className="brand-period">.</span></a><span>Clear requirements. Confident settlement.</span><div><a href={repository}>GitHub <Arrow diagonal /></a><span>© {new Date().getFullYear()} SettleStack</span></div></footer>
   </>
