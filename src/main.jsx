@@ -4,6 +4,10 @@ import './style.css'
 
 const repository = 'https://github.com/settlestack/settlestack.ai'
 function Mark() { return <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="m7 12 13-7 13 7-13 7zM7 20l13 7 13-7M7 28l13 7 13-7" stroke="currentColor" strokeWidth="2.6" strokeLinejoin="round" /></svg> }
+function BrandIcon({ name }) {
+  const source = `url("${import.meta.env.BASE_URL}icons/${name}.svg")`
+  return <span className={`brand-icon brand-icon-${name}`} style={{ maskImage: source, WebkitMaskImage: source }} aria-hidden="true" />
+}
 function Arrow({ diagonal = false }) { return <span aria-hidden="true">{diagonal ? '↗' : '→'}</span> }
 const stages = [
   { name: 'Specify', label: '01 / REQUIREMENTS', title: 'Make the promise explicit.', description: 'Agree on the outcome, the constraints, and what counts as acceptable work. Resolve the details that matter before an agent commits.', rows: [['Deliverable', 'Structured invoice data'], ['Required fields', 'Vendor, date, total, currency'], ['Acceptance', 'Every value traceable to source']], foot: 'AGREEMENT ESTABLISHED', detail: 'Shared criteria for buyer and seller' },
@@ -60,8 +64,8 @@ function App() {
       <aside className="payment-callout" aria-labelledby="payment-heading">
         <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="integration-label">PLANNED PAYMENT INTEGRATIONS</span></div>
         <div className="payment-routes">
-          <div><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4><p>Our planned default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
-          <div><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4><p>Our planned alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
+          <div><div className="payment-name"><BrandIcon name="stripe" /><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4></div><p>Our planned default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
+          <div><div className="payment-name"><BrandIcon name="solana" /><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4></div><p>Our planned alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
         </div>
         <p className="payment-note">SettleStack specifies and verifies the work. The selected payment route executes the authorized release.</p>
       </aside>
@@ -72,7 +76,7 @@ function App() {
       <section className="closing wrap contact" id="contact" aria-labelledby="contact-heading">
         <div className="closing-top"><span className="eyebrow">THE NEXT ECONOMY NEEDS A DEFINITION OF DONE.</span><Mark /></div>
         <div className="contact-grid">
-          <div className="contact-copy"><h2 id="contact-heading">Let’s make agent<br />commerce work.</h2><p>Building agent commerce—or wrangling your own agents? Tell us what you have in mind. We’d love to share more about SettleStack.</p><a className="contact-email" href="mailto:info@settlestack.ai">info@settlestack.ai <Arrow diagonal /></a><a className="discussion-link" href={repository + '/discussions'}>Or join the conversation on GitHub <Arrow diagonal /></a></div>
+          <div className="contact-copy"><h2 id="contact-heading">Let’s make agent<br />commerce work.</h2><p>Building agent commerce—or wrangling your own agents? Tell us what you have in mind. We’d love to share more about SettleStack.</p><a className="contact-email" href="mailto:info@settlestack.ai">info@settlestack.ai <Arrow diagonal /></a><a className="discussion-link" href={repository + '/discussions'}><BrandIcon name="github" />Or join the conversation on GitHub <Arrow diagonal /></a></div>
           <form className="inquiry-form" action="https://formsubmit.co/info@settlestack.ai" method="POST" aria-label="Request more information">
             <input type="hidden" name="_subject" value="New SettleStack website inquiry" />
             <input type="hidden" name="_template" value="table" />
@@ -85,7 +89,7 @@ function App() {
         </div>
       </section>
     </main>
-    <footer className="footer wrap"><a className="brand" href="#"><Mark />SettleStack<span className="brand-period">.</span></a><span>Clear requirements. Confident settlement.</span><div><a href={repository}>GitHub <Arrow diagonal /></a><span>© {new Date().getFullYear()} SettleStack</span></div></footer>
+    <footer className="footer wrap"><a className="brand" href="#"><Mark />SettleStack<span className="brand-period">.</span></a><span>Clear requirements. Confident settlement.</span><div><a className="github-link" href={repository}><BrandIcon name="github" />GitHub <Arrow diagonal /></a><span>© {new Date().getFullYear()} SettleStack</span></div></footer>
   </>
 }
 

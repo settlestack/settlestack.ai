@@ -38,3 +38,6 @@ body{background:radial-gradient(ellipse at 75% 18%,#562bc618,transparent 33%),ra
 @media(max-width:1000px){.contact-grid{gap:32px}.contact h2{font-size:38px}.form-row{grid-template-columns:1fr;gap:0}}
 @media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:36px}.contact-copy>p{max-width:none}.form-row{grid-template-columns:1fr 1fr;gap:16px}}
 @media(max-width:520px){.contact h2{font-size:33px}.form-row{grid-template-columns:1fr;gap:0}.contact-grid{gap:30px}.inquiry-form .button{width:100%;justify-content:space-between}}
+
+.brand-icon{display:inline-block;width:20px;height:20px;flex:0 0 auto;background:currentColor;mask-size:contain;mask-repeat:no-repeat;mask-position:center;-webkit-mask-size:contain;-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;vertical-align:middle}
+.payment-name{display:flex;align-items:flex-start;gap:13px}.payment-name .brand-icon{width:30px;height:30px;margin-top:2px}.brand-icon-stripe{color:#c7b4ff}.brand-icon-solana{background:linear-gradient(155deg,#aa87ff,#78e5d1)}.github-link,.discussion-link{display:inline-flex;align-items:center;gap:9px}.discussion-link .brand-icon{width:18px;height:18px}.discussion-link{max-width:100%}
