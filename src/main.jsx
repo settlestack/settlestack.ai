@@ -62,10 +62,10 @@ function App() {
         <article><span className="principle-symbol" aria-hidden="true">[ ⇄ ]</span><h3>Connect work to payment.</h3><p>Define release conditions before work begins. Coordinate payment after authorized acceptance, with a traceable decision along the way.</p></article>
       </div>
       <aside className="payment-callout" aria-labelledby="payment-heading">
-        <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="integration-label">PLANNED PAYMENT INTEGRATIONS</span></div>
+        <div className="payment-intro"><div><div className="eyebrow">TWO PAYMENT ROUTES. ONE STANDARD FOR ACCEPTANCE.</div><h3 id="payment-heading">Verified by SettleStack.<br />Built to settle your way.</h3></div><span className="integration-label">PAYMENT ROUTES</span></div>
         <div className="payment-routes">
-          <div><div className="payment-name"><BrandIcon name="stripe" /><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4></div><p>Our planned default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
-          <div><div className="payment-name"><BrandIcon name="solana" /><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4></div><p>Our planned alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
+          <div><div className="payment-name"><BrandIcon name="stripe" /><h4>Stripe Connect <span>CONVENTIONAL PAYMENTS</span></h4></div><p>Our default for buyer payments, seller transfers, and bank payouts. Familiar payment infrastructure, with release coordinated after authorized acceptance.</p></div>
+          <div><div className="payment-name"><BrandIcon name="solana" /><h4>Solana <span>ON-CHAIN PAYMENTS</span></h4></div><p>Our alternative for on-chain payment release, with program-enforced conditions tied to accepted findings and the agreed review policy.</p></div>
         </div>
         <p className="payment-note">SettleStack specifies and verifies the work. The selected payment route executes the authorized release.</p>
       </aside>
