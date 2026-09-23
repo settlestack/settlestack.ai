@@ -27,10 +27,13 @@ function App() {
   }
   return <>
     <a className="skip" href="#main">Skip to content</a>
+    <aside className="launch-banner" aria-label="Launch announcement">
+      <div className="wrap launch-banner-inner"><strong>Launching Early 2027</strong><span>Help shape the future of agent commerce.</span><a href="#contact">Become an Early Access Partner <Arrow /></a></div>
+    </aside>
     <header className="header wrap">
       <a className="brand" href="#" aria-label="SettleStack home"><Mark />SettleStack<span className="brand-period">.</span></a>
       <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#why-settlestack">Why SettleStack</a></nav>
-      <a className="header-cta" href="#contact">Get in touch <Arrow diagonal /></a>
+      <a className="header-cta" href="#contact">Early access <Arrow diagonal /></a>
     </header>
     <main id="main">
       <section className="hero wrap">
@@ -76,14 +79,14 @@ function App() {
       <section className="closing wrap contact" id="contact" aria-labelledby="contact-heading">
         <div className="closing-top"><span className="eyebrow">THE NEXT ECONOMY NEEDS A DEFINITION OF DONE.</span><Mark /></div>
         <div className="contact-grid">
-          <div className="contact-copy"><h2 id="contact-heading">Let’s make agent<br />commerce work.</h2><p>Building agent commerce—or wrangling your own agents? Tell us what you have in mind. We’d love to share more about SettleStack.</p><a className="contact-email" href="mailto:info@settlestack.ai">info@settlestack.ai <Arrow diagonal /></a><a className="discussion-link" href={repository + '/discussions'}><BrandIcon name="github" />Or join the conversation on GitHub <Arrow diagonal /></a></div>
-          <form className="inquiry-form" action="https://formsubmit.co/info@settlestack.ai" method="POST" aria-label="Request more information">
-            <input type="hidden" name="_subject" value="New SettleStack website inquiry" />
+          <div className="contact-copy"><h2 id="contact-heading">Let’s make agent<br />commerce work.</h2><p>We’re welcoming early access partners ahead of our early 2027 launch. Building agent commerce—or wrangling your own agents? Tell us about your use case and help shape what comes next.</p><a className="contact-email" href="mailto:info@settlestack.ai">info@settlestack.ai <Arrow diagonal /></a><a className="discussion-link" href={repository + '/discussions'}><BrandIcon name="github" />Or join the conversation on GitHub <Arrow diagonal /></a></div>
+          <form className="inquiry-form" action="https://formsubmit.co/info@settlestack.ai" method="POST" aria-label="Early access partner inquiry">
+            <input type="hidden" name="_subject" value="SettleStack early access partner inquiry" />
             <input type="hidden" name="_template" value="table" />
             <input className="form-trap" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <div className="form-row"><label htmlFor="contact-name">Name<input id="contact-name" name="name" autoComplete="name" placeholder="Your name" required minLength={2} maxLength={100} pattern=".*\S.*" /></label><label htmlFor="contact-email">Email<input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@company.com" required maxLength={254} /></label></div>
-            <label htmlFor="contact-message">What would you like to know?<textarea id="contact-message" name="message" placeholder="Tell us about your agents, your project, or what you’re curious about." rows={4} required minLength={10} maxLength={5000} /></label>
-            <button className="button dark" type="submit">Request more info <Arrow /></button>
+            <label htmlFor="contact-message">What are you building?<textarea id="contact-message" name="message" placeholder="Tell us about your agents, the work they deliver, and what you’d like to explore with SettleStack." rows={4} required minLength={10} maxLength={5000} /></label>
+            <button className="button dark" type="submit">Let’s talk early access <Arrow /></button>
             <p className="form-note">Your inquiry is processed by FormSubmit and emailed to SettleStack. A spam check may appear after you submit.</p>
           </form>
         </div>
